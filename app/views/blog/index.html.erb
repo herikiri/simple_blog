@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+	<article>
+		<h1><%= link_to article.title, article %></h1>
+		<span class="published_at"><%= article.created_at.to_date %></span>
+		<p><%= truncate article.content, length: 500 %></p>
+	</article>
+<% end %>
+
